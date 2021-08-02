@@ -2,8 +2,8 @@ syntax enable  			  		" syntax highlighting
 set exrc					    " read per-project .vim files
 set relativenumber              " linenumbers rel to linenumber
 set hidden
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=4 softtabstop=4     " use 4 spaces when tab is hit
+set shiftwidth=4                " autoindent 4 spaces
 set expandtab
 set smartindent
 set autoindent
@@ -30,12 +30,12 @@ set undolevels=1000
 set backspace=indent,eol,start
 set encoding=utf-8		        " Set encoding to utf-8
 set pumheight=10		        " Popup menu to size 10
-set iskeyword+=-		" Treat dash-separated words as a word text object
-set mouse=a			" Enable use of mouse
-set splitbelow			" Horizontal splits will automatically be below
-set splitright			" Vertical splits will automatically be to the right
-set t_Co=256			" Support 256 colors
-set conceallevel=0		" So you can see `` in markdown files
+set iskeyword+=-		        " Treat dash-separated words as a word text object
+set mouse=a			            " Enable use of mouse
+set splitbelow			        " Horizontal splits will automatically be below
+set splitright			        " Vertical splits will automatically be to the right
+set t_Co=256			        " Support 256 colors
+set conceallevel=0		        " So you can see `` in markdown files
 set background=dark             " tell vim what the background color looks like
 set showtabline=2               " Always show tabs
 set nobackup                    " This is recommended by coc
