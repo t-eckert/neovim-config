@@ -6,7 +6,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
- 
+
+  " Language server
+  Plug 'neovim/nvim-lspconfig'
+
   " Syntax support
   Plug 'sheerun/vim-polyglot'
 

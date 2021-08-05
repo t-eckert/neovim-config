@@ -1,9 +1,0 @@
-{
-    "suggest.noselect": false,
-    "python.formatting.provider": "black",
-    "json.format.enable": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "python",
-        "json"
-    ]
-}
