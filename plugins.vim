@@ -38,7 +38,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Change working directory to root on startup
   Plug 'airblade/vim-rooter'
 
-  "" Language-specific plugins
+  " Airline bottom bar
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  " Language-specific plugins
   Plug 'psf/black', { 'branch': 'stable' } 
   Plug 'ray-x/go.nvim'
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
