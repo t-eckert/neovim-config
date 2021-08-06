@@ -3,6 +3,10 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
+" Write and quit shortcuts
+nnoremap <leader>w :wq<CR>
+nnoremap <leader>q :q<CR>
+
 " Move panes with CTRL+direction
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k

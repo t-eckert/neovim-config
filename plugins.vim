@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Language server
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
 
   " Syntax support
   Plug 'sheerun/vim-polyglot'
