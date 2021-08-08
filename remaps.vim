@@ -17,3 +17,9 @@ nnoremap <C-H> <C-W>h
 nnoremap <TAB> gt
 nnoremap <S-TAB> gt
 
+" Split remaps
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>h :hsplit<CR>
+
+" Create new files
+nnoremap <leader>c :!touch 

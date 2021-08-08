@@ -11,11 +11,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
 
+  " Git gutter
+  Plug 'airblade/vim-gitgutter'
   " Syntax support
   Plug 'sheerun/vim-polyglot'
-
-  " Autocomplete
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Colorscheme
   Plug 'joshdick/onedark.vim'
@@ -47,7 +46,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'psf/black', { 'branch': 'stable' } 
   Plug 'ray-x/go.nvim'
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
-  Plug 'codechips/coc-svelte', {'do': 'npm install'}
   Plug 'mattn/emmet-vim'
 
 call plug#end()
