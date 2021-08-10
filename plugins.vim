@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Git gutter
   Plug 'airblade/vim-gitgutter'
+
   " Syntax support
   Plug 'sheerun/vim-polyglot'
 
@@ -47,5 +48,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ray-x/go.nvim'
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
   Plug 'mattn/emmet-vim'
+  Plug 'godlygeek/tabular'
 
 call plug#end()

@@ -15,6 +15,16 @@ require'compe'.setup {
   preselect = 'enable';
 }
 
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return vim.fn["compe#confirm"]()
+  elseif vim.fn.call("vsnip#available", {1}) == 1 then
+    return t("<Plug>(vsnip-expand-or-jump)")
+  else
+    return t("<Tab>")
+  end
+end
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
