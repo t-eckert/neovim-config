@@ -16,7 +16,7 @@ set undofile
 set incsearch
 set scrolloff=8                 " scroll offset from cursor
 set noshowmode
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 set signcolumn=yes
 set number
 set linebreak
