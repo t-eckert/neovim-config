@@ -17,6 +17,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Syntax support
   Plug 'sheerun/vim-polyglot'
 
+  " Tags
+  Plug 'ludovicchabant/vim-gutentags'
+
   " Colorscheme
   Plug 'joshdick/onedark.vim'
 
