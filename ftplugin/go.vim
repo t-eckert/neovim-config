@@ -7,3 +7,4 @@ setlocal noexpandtab
 
 compiler go
 
+nnoremap <leader>f :! go fmt<CR>

@@ -11,6 +11,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
 
+  " Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
   " Git gutter
   Plug 'airblade/vim-gitgutter'
 
@@ -48,7 +51,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Language-specific plugins
   Plug 'psf/black', { 'branch': 'stable' } 
-  Plug 'ray-x/go.nvim'
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
   Plug 'mattn/emmet-vim'
   Plug 'godlygeek/tabular'
