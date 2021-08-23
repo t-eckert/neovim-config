@@ -1,5 +1,6 @@
 let mapleader = " "
 
+source ~/.config/nvim/providers.vim
 source ~/.config/nvim/settings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/remaps.vim
