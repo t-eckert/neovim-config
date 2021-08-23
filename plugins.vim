@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Language server
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
+  Plug 'L3MON4D3/LuaSnip'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
