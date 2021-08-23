@@ -19,7 +19,7 @@ nnoremap <S-TAB> gt
 
 " Split remaps
 nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>h :hsplit<CR>
+nnoremap <leader>h :split<CR>
 
 " Create new files
 nnoremap <leader>c :!touch 
@@ -33,3 +33,6 @@ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Goto tag
 nnoremap <leader>o <C-]>
+
+" Create task
+nnoremap <leader>n o<esc>I- [ ] <esc>
