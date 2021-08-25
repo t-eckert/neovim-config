@@ -55,5 +55,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'evanleck/vim-svelte', {'branch': 'main'}
   Plug 'mattn/emmet-vim'
   Plug 'godlygeek/tabular'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
