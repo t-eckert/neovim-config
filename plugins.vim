@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ludovicchabant/vim-gutentags'
 
   " Colorscheme
-  Plug 'joshdick/onedark.vim'
+  Plug 'arcticicestudio/nord-vim'
 
   " Insert new UUID on <leader>u 
   Plug 'kburdett/vim-nuuid'
