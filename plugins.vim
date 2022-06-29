@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ludovicchabant/vim-gutentags'
 
   " Colorscheme
-  Plug 'arcticicestudio/nord-vim'
+  Plug 'shaunsingh/nord.nvim'
 
   " Insert new UUID on <leader>u 
   Plug 'kburdett/vim-nuuid'
@@ -45,10 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   
   " Change working directory to root on startup
   Plug 'airblade/vim-rooter'
-
-  " Airline bottom bar
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
 
   " Language-specific plugins
   Plug 'psf/black', { 'branch': 'stable' } 
