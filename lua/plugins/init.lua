@@ -16,7 +16,9 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "EdenEast/nightfox.nvim" -- Colorscheme
 	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
-	Plug "junegunn/fzf"
+	Plug "junegunn/fzf" -- Fuzzy search
+	Plug "nvim-lualine/lualine.nvim" -- Status line
+	Plug "kyazdani42/nvim-web-devicons" -- Icons
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "L3MON4D3/LuaSnip" -- Common Lua snippets
 	Plug "airblade/vim-gitgutter" -- Git gutter
@@ -25,8 +27,11 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "nvim-lua/popup.nvim" -- Allow for popup windows
 	Plug "jiangmiao/auto-pairs" -- Autoclose pairings
 	Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
-	Plug "airblade/vim-rooter" -- Change working directory to root on startup
+	Plug 'notjedi/nvim-rooter.lua' -- Change working directory to root on startup
 	Plug "psf/black" -- Python formatter
+	Plug 'fatih/vim-go'
+	Plug 'ray-x/go.nvim'
+	Plug 'ray-x/guihua.lua' 
 	Plug "evanleck/vim-svelte" -- Svelte 
 	Plug "mattn/emmet-vim" -- Emmet completion
 	Plug "godlygeek/tabular" -- Alignment
@@ -40,3 +45,9 @@ plugEnd()
 -- starting them. Otherwise, the plugin itself is required and its `setup` method is called.
 require("plugins/colorscheme")
 require("plugins/fzf")
+require("plugins/statusline")
+
+-- "Root" identifiers for changing working directory
+require('nvim-rooter').setup {
+  rooter_patterns = {'.git', 'Makefile', '*.sln', 'build/env.sh', '.venv/', '.gitignore', 'go.mod'},
+}
