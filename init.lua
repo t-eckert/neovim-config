@@ -153,6 +153,7 @@ nmap("<leader>.", "<c-^>")
 nmap("<leader>z", "<Plug>Zoom")
 nnoremap("<leader>v", ":vsplit<CR>")
 nnoremap("<leader>h", ":split<CR>")
+nnoremap("<leader>/", "gcc")
 nnoremap("<leader>c", ":!touch ") -- create a new file
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":wq<CR>") -- save and quit buffer
@@ -214,5 +215,3 @@ cmd [[highlight htmlArg cterm=italic term=italic gui=italic]]
 cmd [[highlight xmlAttrib cterm=italic term=italic gui=italic]]
 -- highlight Type cterm=italic term=italic gui=italic
 cmd [[highlight Normal ctermbg=none]]
--- make the StatusLine background match the GalaxyLine styles
-cmd("hi StatusLine guibg=" .. colors.bg)
