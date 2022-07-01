@@ -94,7 +94,7 @@ end
 -------------------------------------------------------------------------------
 opt.number = true -- show line numbers
 opt.relativenumber = true -- use relative line numbers
-opt.wrap = true -- use line wrapping
+opt.wrap = false -- don't use line wrapping
 opt.wrapmargin = 8 -- wrap lines when n characters from the edge
 opt.linebreak = true -- set softwrapping
 opt.autoindent = true -- automatically set the indent of new lines
@@ -163,6 +163,8 @@ nnoremap("<leader>x", "^elrx<ESC>") -- cross off a task
 nnoremap("<leader>-", "^elr-<ESC>") -- partially complete a task
 nnoremap("<leader>>", "^elr><ESC>") -- defer a task
 nnoremap("<leader>a", ":nohl<CR>") -- clear search highlight
+nmap("<leader>b", ":Buffers<cr>")
+nmap("<leader>p", ":FZF<cr>")
 
 -- save with CTRL+S
 nnoremap("<silent> <C-S>", ":update<CR>")

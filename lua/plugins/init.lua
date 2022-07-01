@@ -15,9 +15,8 @@ plugBegin("~/.config/nvim/plugged")
 
 	Plug "EdenEast/nightfox.nvim" -- Colorscheme
 	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
-	Plug "nvim-telescope/telescope.nvim" -- Telescope
-	Plug "nvim-telescope/telescope-rg.nvim" -- Telescope ripgrep support
 	Plug "neovim/nvim-lspconfig" -- Language server
+	Plug "junegunn/fzf"
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "L3MON4D3/LuaSnip" -- Common Lua snippets
 	Plug "airblade/vim-gitgutter" -- Git gutter
@@ -26,9 +25,6 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "nvim-lua/popup.nvim" -- Allow for popup windows
 	Plug "jiangmiao/auto-pairs" -- Autoclose pairings
 	Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
-	Plug "$HOMEBREW_PREFIX/opt/fzf"
-	Plug "junegunn/fzf.vim" -- Fuzzy finding
-	Plug("nvim-telescope/telescope-fzf-native.nvim", {["do"] = "make"})
 	Plug "airblade/vim-rooter" -- Change working directory to root on startup
 	Plug "psf/black" -- Python formatter
 	Plug "evanleck/vim-svelte" -- Svelte 
@@ -42,5 +38,5 @@ plugEnd()
 -- Once the plugins have been loaded, Lua-based plugins need to be required and started up
 -- For plugins with their own configuration file, that file is loaded and is responsible for
 -- starting them. Otherwise, the plugin itself is required and its `setup` method is called.
-require("plugins.colorscheme")
-require("plugins.fzf")
+require("plugins/colorscheme")
+require("plugins/fzf")
