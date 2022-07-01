@@ -13,28 +13,31 @@ local Plug = fn["plug#"]
 plugLoad()
 plugBegin("~/.config/nvim/plugged")
 
-	Plug "EdenEast/nightfox.nvim" -- Colorscheme
 	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
 	Plug "junegunn/fzf" -- Fuzzy search
 	Plug "nvim-lualine/lualine.nvim" -- Status line
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
+	Plug "airblade/vim-gitgutter" -- Git gutter
+
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "L3MON4D3/LuaSnip" -- Common Lua snippets
-	Plug "airblade/vim-gitgutter" -- Git gutter
+
+	Plug "EdenEast/nightfox.nvim" -- Colorscheme
 	Plug "sheerun/vim-polyglot" -- Syntax support
+
 	Plug "kburdett/vim-nuuid" -- Insert new UUID on <leader>u 
-	Plug "nvim-lua/popup.nvim" -- Allow for popup windows
 	Plug "jiangmiao/auto-pairs" -- Autoclose pairings
 	Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
 	Plug 'notjedi/nvim-rooter.lua' -- Change working directory to root on startup
+	Plug "godlygeek/tabular" -- Alignment
+
 	Plug "psf/black" -- Python formatter
 	Plug 'fatih/vim-go'
 	Plug 'ray-x/go.nvim'
 	Plug 'ray-x/guihua.lua' 
 	Plug "evanleck/vim-svelte" -- Svelte 
 	Plug "mattn/emmet-vim" -- Emmet completion
-	Plug "godlygeek/tabular" -- Alignment
 	Plug("gregsexton/MatchTag", {["for"] = "html"}) -- match tags in html
 	Plug("othree/html5.vim", {["for"] = "html"}) -- html5 support
 
