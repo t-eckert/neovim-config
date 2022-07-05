@@ -20,6 +20,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
 	Plug "airblade/vim-gitgutter" -- Git gutter
 	Plug "nvim-lua/plenary.nvim" -- Lua helpers that are used by other plugins
+	Plug "kyazdani42/nvim-tree.lua" -- File tree
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "L3MON4D3/LuaSnip" -- Common Lua snippets
@@ -31,14 +32,14 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "tpope/vim-fugitive" -- Git support
 	Plug "jiangmiao/auto-pairs" -- Autoclose pairings
 	Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
-	Plug 'notjedi/nvim-rooter.lua' -- Change working directory to root on startup
+	Plug "notjedi/nvim-rooter.lua" -- Change working directory to root on startup
 	Plug "godlygeek/tabular" -- Alignment
 	Plug "editorconfig/editorconfig-vim" -- editorconfig file support
 
 	Plug "psf/black" -- Python formatter
-	Plug 'fatih/vim-go'
-	Plug 'ray-x/go.nvim'
-	Plug 'ray-x/guihua.lua' 
+	Plug "fatih/vim-go"
+	Plug "ray-x/go.nvim"
+	Plug "ray-x/guihua.lua" 
 	Plug "evanleck/vim-svelte" -- Svelte 
 	Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 	Plug "mattn/emmet-vim" -- Emmet completion
@@ -53,8 +54,9 @@ plugEnd()
 require("plugins/colorscheme")
 require("plugins/fzf")
 require("plugins/statusline")
+require("plugins/nvim-tree")
 
 -- "Root" identifiers for changing working directory
-require('nvim-rooter').setup {
-  rooter_patterns = {'.git', 'Makefile', '*.sln', 'build/env.sh', '.venv/', '.gitignore', 'go.mod'},
+require("nvim-rooter").setup {
+  rooter_patterns = {".git", "Makefile", "*.sln", "build/env.sh", ".venv/", ".gitignore", "go.mod"},
 }

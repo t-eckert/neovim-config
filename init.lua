@@ -118,6 +118,8 @@ opt.mat = 2 -- how many tenths of a second to blink
 opt.updatetime = 300
 opt.signcolumn = "yes"
 opt.shortmess = "atToOFc" -- prompt message options
+cmd "set noshowmode"
+opt.conceallevel = 0
 
 -- tab control
 opt.smarttab = true -- tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
@@ -154,6 +156,7 @@ nmap("<leader>z", "<Plug>Zoom")
 nnoremap("<leader>v", ":vsplit<CR>")
 nnoremap("<leader>h", ":split<CR>")
 nnoremap("<leader>/", "gcc")
+nnoremap("<leader>e", ":NvimTreeToggle<CR>")
 nnoremap("<leader>c", ":!touch ") -- create a new file
 nnoremap("<leader>w", ":w<CR>")
 nnoremap("<leader>q", ":wq<CR>") -- save and quit buffer
