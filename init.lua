@@ -4,9 +4,16 @@
 -------------------------------------------------------------------------------
 ---- Imports and Constants ----------------------------------------------------
 -------------------------------------------------------------------------------
-require("globals")
-require("autoreplace")
 require("plugins")
+require("autoreplace")
+require("globals")
+require("lsp")
+require("colorscheme")
+require("fzf")
+require("statusline")
+require("rooter")
+require("prettier")
+
 local opt = vim.opt
 local cmd = vim.cmd
 local g = vim.g
@@ -119,6 +126,7 @@ opt.updatetime = 300
 opt.signcolumn = "yes"
 opt.shortmess = "atToOFc" -- prompt message options
 cmd "set noshowmode"
+cmd "set completeopt=menu,menuone,noselect"
 opt.conceallevel = 0
 
 -- tab control
