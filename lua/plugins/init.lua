@@ -46,7 +46,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "psf/black" -- Python formatter
 	Plug "fatih/vim-go"
 	Plug "ray-x/go.nvim"
-	Plug "ray-x/guihua.lua" 
+	Plug "ray-x/guihua.lua"
 	Plug "evanleck/vim-svelte" -- Svelte 
 	Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 	Plug "mattn/emmet-vim" -- Emmet completion
@@ -57,3 +57,4 @@ plugEnd()
 
 require("plugins/cmp")
 require("plugins/nvim-tree")
+require("plugins/nvim-lsp-installer")

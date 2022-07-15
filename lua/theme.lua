@@ -46,7 +46,6 @@ local icons = {
   unmerged = "",
   renamed = "➜",
   untracked = "★",
-  deleted = "",
   ignored = "◌",
   modified = "",
   deleted = "",
@@ -61,7 +60,6 @@ local icons = {
   symlink = "",
   symlink_open = "",
   file = "",
-  symlink = "",
   file_readonly = "",
   file_modified = "",
   -- misc
