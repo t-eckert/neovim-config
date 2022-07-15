@@ -47,6 +47,9 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "fatih/vim-go"
 	Plug "ray-x/go.nvim"
 	Plug "ray-x/guihua.lua" 
+	Plug 'JulesWang/css.vim' 
+	Plug 'alexlafroscia/postcss-syntax.vim'
+	Plug 'stephenway/postcss.vim'
 	Plug "evanleck/vim-svelte" -- Svelte 
 	Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 	Plug "mattn/emmet-vim" -- Emmet completion
