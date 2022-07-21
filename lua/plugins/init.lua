@@ -1,10 +1,4 @@
-local g = vim.g
 local fn = vim.fn
-local utils = require("utils")
-local nmap = utils.nmap
-local env = vim.env
-local cmd = vim.cmd
-
 local plugLoad = fn["functions#PlugLoad"]
 local plugBegin = fn["plug#begin"]
 local plugEnd = fn["plug#end"]
@@ -23,6 +17,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "nvim-lua/plenary.nvim" -- Lua helpers that are used by other plugins
 	Plug "kyazdani42/nvim-tree.lua" -- File tree
 	Plug 'windwp/nvim-autopairs' -- Autoclose
+	Plug 'norcalli/nvim-colorizer.lua'
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug 'hrsh7th/cmp-nvim-lsp' -- Completion LSP 
