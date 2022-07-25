@@ -23,6 +23,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "nvim-lua/plenary.nvim" -- Lua helpers that are used by other plugins
 	Plug "kyazdani42/nvim-tree.lua" -- File tree
 	Plug 'windwp/nvim-autopairs' -- Autoclose
+	Plug 'tpope/vim-abolish' -- Better replacement
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug 'hrsh7th/cmp-nvim-lsp' -- Completion LSP 
