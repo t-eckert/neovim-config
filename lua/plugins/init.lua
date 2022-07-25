@@ -9,7 +9,7 @@ plugBegin("~/.config/nvim/plugged")
 
 	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
-	Plug "williamboman/nvim-lsp-installer" -- Installer for LSPs
+	Plug "williamboman/mason.nvim" -- Installer for LSPs
 	Plug "junegunn/fzf" -- Fuzzy search
 	Plug "nvim-lualine/lualine.nvim" -- Status line
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
@@ -18,6 +18,8 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "kyazdani42/nvim-tree.lua" -- File tree
 	Plug 'windwp/nvim-autopairs' -- Autoclose
 	Plug 'norcalli/nvim-colorizer.lua'
+	Plug "sharkdp/fd"
+	Plug('nvim-telescope/telescope.nvim', { ['tag']= '0.1.0' })
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug 'hrsh7th/cmp-nvim-lsp' -- Completion LSP 
@@ -55,4 +57,4 @@ plugEnd()
 
 require("plugins/cmp")
 require("plugins/nvim-tree")
-require("plugins/nvim-lsp-installer")
+require("mason").setup()
