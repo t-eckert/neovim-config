@@ -176,7 +176,8 @@ nnoremap("<leader>-", "^elr-<ESC>") -- partially complete a task
 nnoremap("<leader>>", "^elr><ESC>") -- defer a task
 nnoremap("<leader>a", ":nohl<CR>") -- clear search highlight
 nmap("<leader>b", ":Buffers<cr>")
-nmap("<leader>p", ":FZF<cr>")
+nmap("<leader>p", ":Telescope find_files<cr>")
+nmap("<leader>g", ":Telescope live_grep<cr>")
 
 -- save with CTRL+S
 nnoremap("<silent> <C-S>", ":update<CR>")
