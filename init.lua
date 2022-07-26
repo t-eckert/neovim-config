@@ -11,11 +11,13 @@ require("mappings")
 
 -- Plugins
 require("plugins")
+require("filetree")
+require("mason").setup()
 require("lsp")
 require("colorscheme")
 require("statusline")
 require("rooter")
-require("cmp")
+require("completion")
 
 local utils = require("utils")
 

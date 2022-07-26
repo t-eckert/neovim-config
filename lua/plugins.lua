@@ -55,6 +55,3 @@ plugBegin("~/.config/nvim/plugged")
 	Plug("othree/html5.vim", {["for"] = "html"}) -- html5 support
 
 plugEnd()
-
-require("plugins/nvim-tree")
-require("mason").setup()
