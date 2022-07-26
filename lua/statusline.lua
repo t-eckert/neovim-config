@@ -4,4 +4,4 @@ require('lualine').setup(
 			theme = "iceberg_dark"
 		}
 	}
-	)
+)

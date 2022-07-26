@@ -10,7 +10,6 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
 	Plug "williamboman/mason.nvim" -- Installer for LSPs
-	Plug "junegunn/fzf" -- Fuzzy search
 	Plug "nvim-lualine/lualine.nvim" -- Status line
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
 	Plug "airblade/vim-gitgutter" -- Git gutter
@@ -57,6 +56,5 @@ plugBegin("~/.config/nvim/plugged")
 
 plugEnd()
 
-require("plugins/cmp")
 require("plugins/nvim-tree")
 require("mason").setup()
