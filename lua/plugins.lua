@@ -12,7 +12,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "williamboman/mason.nvim" -- Installer for LSPs
 	Plug "nvim-lualine/lualine.nvim" -- Status line
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
-	Plug "airblade/vim-gitgutter" -- Git gutter
+	Plug "lewis6991/gitsigns.nvim" -- Git gutter
 	Plug "nvim-lua/plenary.nvim" -- Lua helpers that are used by other plugins
 	Plug "kyazdani42/nvim-tree.lua" -- File tree
 	Plug 'windwp/nvim-autopairs' -- Autoclose

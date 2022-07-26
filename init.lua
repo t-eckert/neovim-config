@@ -18,6 +18,7 @@ require("colorscheme")
 require("statusline")
 require("rooter")
 require("completion")
+require('gitsigns').setup()
 
 local utils = require("utils")
 
