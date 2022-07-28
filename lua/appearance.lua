@@ -1,15 +1,10 @@
 vim.opt.number = true -- show line numbers
 vim.opt.relativenumber = true -- use relative line numbers
 vim.opt.wrap = false -- don't use line wrapping
-vim.opt.wrapmargin = 8 -- wrap lines when n characters from the edge
-vim.opt.linebreak = true -- set softwrapping
 vim.opt.autoindent = true -- automatically set the indent of new lines
 vim.opt.ttyfast = true -- faster redrawing
-table.insert(vim.opt.diffopt, "vertical")
-table.insert(vim.opt.diffopt, "iwhite")
-table.insert(vim.opt.diffopt, "internal")
-table.insert(vim.opt.diffopt, "algorithm:patience")
-table.insert(vim.opt.diffopt, "hiddenoff")
+vim.opt.splitright = true
+
 vim.opt.laststatus = 3 -- show the global statusline all the time
 vim.opt.scrolloff = 7 -- set 7 lines to the cursors - when moving vertical
 vim.opt.wildmenu = true -- enhanced command line completion
@@ -26,7 +21,14 @@ vim.opt.signcolumn = "yes"
 vim.opt.shortmess = "atToOFc" -- prompt message options
 vim.cmd "set noshowmode"
 vim.cmd "set completeopt=menu,menuone,noselect"
-vim.opt.conceallevel = 0
+vim.opt.conceallevel = 0 -- Show text that has been concealed
+
+-- Diff settings
+table.insert(vim.opt.diffopt, "vertical")
+table.insert(vim.opt.diffopt, "iwhite")
+table.insert(vim.opt.diffopt, "internal")
+table.insert(vim.opt.diffopt, "algorithm:patience")
+table.insert(vim.opt.diffopt, "hiddenoff")
 
 -- tab control
 vim.opt.smarttab = true -- tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
