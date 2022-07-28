@@ -19,9 +19,10 @@ plugBegin("~/.config/nvim/plugged")
 	Plug 'tpope/vim-abolish' -- Better replacement
 	Plug "norcalli/nvim-colorizer.lua" -- Show hex colors
 	Plug "sharkdp/fd" -- Find alternative
-	Plug("nvim-telescope/telescope.nvim", { ["tag"]= "0.1.0" }) -- Modal search
+	Plug("nvim-telescope/telescope.nvim", {["tag"] = "0.1.0"}) -- Modal search
 	Plug "edluffy/hologram.nvim" -- Display images
 	Plug "ray-x/guihua.lua" -- GUI management
+	Plug("akinsho/toggleterm.nvim", {["tag"] = "v2.*"})
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP 
@@ -31,6 +32,8 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "L3MON4D3/LuaSnip" -- Snippet engine
 	Plug "saadparwaiz1/cmp_luasnip"-- Engine plugin for CMP
 	Plug "rafamadriz/friendly-snippets" -- Common, useful snippets
+	Plug "VonHeikemen/lsp-zero.nvim"
+	Plug "williamboman/mason-lspconfig.nvim"
 
 	Plug "EdenEast/nightfox.nvim" -- Colorscheme
 	Plug "sheerun/vim-polyglot" -- Syntax support
@@ -49,6 +52,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "alexlafroscia/postcss-syntax.vim" -- PostCSS syntax highlighting
 	Plug "stephenway/postcss.vim" -- PostCSS support
 	Plug "evanleck/vim-svelte" -- Svelte 
+	Plug("prettier/vim-prettier", { ["do"] = "yarn install --frozen-lockfile --production" }) -- Prettier
 	Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 	Plug "mattn/emmet-vim" -- Emmet completion
 	Plug("gregsexton/MatchTag", {["for"] = "html"}) -- match tags in html

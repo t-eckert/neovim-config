@@ -8,6 +8,7 @@ require("globals")
 require("search")
 require("appearance")
 require("mappings")
+require("theme")
 
 -- Plugins
 require("plugins")
@@ -18,7 +19,9 @@ require("colorscheme")
 require("statusline")
 require("rooter")
 require("completion")
-require('gitsigns').setup()
+require("gitsigns").setup()
+require("prettier")
+require("terminal")
 
 local utils = require("utils")
 
