@@ -51,6 +51,12 @@ omap("il", ":<c-u>normal! g_v^<cr>")
 vmap("al", ":<c-u>normal! $v0<cr>") -- around line
 omap("al", ":<c-u>normal! $v0<cr>")
 
+-- LSP navigation
+nnoremap("K", vim.lsp.buf.hover)
+nnoremap("gd", vim.lsp.buf.definition)
+nnoremap("gt", vim.lsp.buf.type_definition)
+nnoremap("gi", vim.lsp.buf.implementation)
+
 nnoremap("Q", "<nop>") -- Normal Mode: Unset Shift-Q
 
 nnoremap("K", vim.lsp.buf.hover)
