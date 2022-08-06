@@ -53,6 +53,11 @@ omap("al", ":<c-u>normal! $v0<cr>")
 
 nnoremap("Q", "<nop>") -- Normal Mode: Unset Shift-Q
 
+nnoremap("K", vim.lsp.buf.hover)
+nnoremap("gd", vim.lsp.buf.definition)
+nnoremap("gt", vim.lsp.buf.type_definition)
+nnoremap("gi", vim.lsp.buf.implementation)
+
 if utils.file_exists(fn.expand("~/.vimrc_background")) then
   g.base16colorspace = 256
   cmd [[source ~/.vimrc_background]]
@@ -85,3 +90,7 @@ nnoremap("<leader>a", ":nohl<CR>") -- Clear search highlight
 nmap("<leader>b", ":Buffers<cr>") -- Search buffers
 nmap("<leader>p", ":Telescope find_files<cr>") -- Search files
 nmap("<leader>g", ":Telescope live_grep<cr>") -- Grep files
+
+nnoremap("<leader>dn", vim.diagnostic.goto_next)
+nnoremap("<leader>dp", vim.diagnostic.goto_prev)
+nnoremap("<leader>r", vim.lsp.buf.rename)

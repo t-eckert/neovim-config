@@ -52,10 +52,11 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "alexlafroscia/postcss-syntax.vim" -- PostCSS syntax highlighting
 	Plug "stephenway/postcss.vim" -- PostCSS support
 	Plug "evanleck/vim-svelte" -- Svelte 
-	Plug("prettier/vim-prettier", { ["do"] = "yarn install --frozen-lockfile --production" }) -- Prettier
+	Plug("prettier/vim-prettier", { ["do"] = "yarn install --frozen-lockfile --production", ["for"] = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'vue', 'svelte', 'yaml', 'html'} }) -- Prettier
 	Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 	Plug "mattn/emmet-vim" -- Emmet completion
 	Plug("gregsexton/MatchTag", {["for"] = "html"}) -- match tags in html
 	Plug("othree/html5.vim", {["for"] = "html"}) -- html5 support
+	Plug 'mzlogin/vim-markdown-toc'
 
 plugEnd()
