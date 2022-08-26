@@ -23,6 +23,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "edluffy/hologram.nvim" -- Display images
 	Plug "ray-x/guihua.lua" -- GUI management
 	Plug("akinsho/toggleterm.nvim", {["tag"] = "v2.*"})
+	Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
 
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP 
