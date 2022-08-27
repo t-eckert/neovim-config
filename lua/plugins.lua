@@ -7,7 +7,7 @@ local Plug = fn["plug#"]
 plugLoad()
 plugBegin("~/.config/nvim/plugged")
 
-	Plug "nvim-treesitter/nvim-treesitter" -- Treesitter
+	Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"}) -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
 	Plug "williamboman/mason.nvim" -- Installer for LSPs
 	Plug "nvim-lualine/lualine.nvim" -- Status line
@@ -61,3 +61,8 @@ plugBegin("~/.config/nvim/plugged")
 	Plug 'mzlogin/vim-markdown-toc'
 
 plugEnd()
+
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {"go"},
+	auto_install = true,
+})
