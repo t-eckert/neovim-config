@@ -23,6 +23,9 @@ require("gitsigns").setup()
 require("prettier")
 require("terminal")
 
+-- Scripts
+-- require("testrunner")
+
 local utils = require("utils")
 
 -- create a completion_nvim table on _G which is visible via
@@ -37,3 +40,14 @@ function _G.completion_nvim.smart_pumvisible(vis_seq, not_vis_seq)
   end
 end
 
+-- Useful for debugging.
+function _G.put(...)
+  local objects = {}
+  for i = 1, select('#', ...) do
+    local v = select(i, ...)
+    table.insert(objects, vim.inspect(v))
+  end
+
+  print(table.concat(objects, '\n'))
+  return ...
+end
