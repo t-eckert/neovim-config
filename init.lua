@@ -24,7 +24,8 @@ require("prettier")
 require("terminal")
 
 -- Scripts
--- require("testrunner")
+require("testrunner")
+require("boundaries")
 
 local utils = require("utils")
 

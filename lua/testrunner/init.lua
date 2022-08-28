@@ -29,34 +29,24 @@ end
 -- Go -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
 
--- LSP query for a Go test.
-local go_test_function_query_string = [[
-(
- (function_declaration
-  name: (identifier) @name
-  parameters:
-    (parameter_list
-     (parameter_declaration
-      name: (identifier)
-      type: (pointer_type
-          (qualified_type
-           package: (package_identifier) @_package_name
-           name: (type_identifier) @_type_name)))))
- (#eq? @_package_name "testing")
- (#eq? @_type_name "T")
- (#eq? @name "%s")
-)
-]]
+local go_test_function_name = function(fullname)
+	local segments = {}
+	-- Break on "/" for matches.
+	for str in string.gmatch(fullname, "([^/]+)") do
+		table.insert(segments, str)
+	end
+	return segments[1]
+end
 
--- Use the LSP to find the line in the buffer matching the given test name.
+-- Use treesitter to find the line in the buffer matching the given test name.
 local go_find_line = function(buffer_number, name)
 	local query = vim.treesitter.parse_query("go", string.format([[
 		(
 			(function_declaration
 				name: (identifier) @name
-				parameters: (
-					parameter_list (parameter_declaration name: (identifier) type: (pointer_type
-						(qualified_type
+				parameters: (parameter_list (parameter_declaration 
+					name: (identifier) 
+					type: (pointer_type(qualified_type
 						package: (package_identifier) @_package_name
 						name: (type_identifier) @_type_name)))))
 
@@ -96,44 +86,21 @@ local go_options = function(state)
 						Name = test_metadata.Test,
 						Action = test_metadata.Action,
 						Line = go_find_line(state.buffer_number, test_metadata.Test),
-						Message = "",
 					}
 
-					if test.Action == "output" then
-						test.Message = test_metadata.Output
-					elseif test.Action == "pass" then
-						
+					if test.Action == "pass" then
+						if test.Line then
+							vim.api.nvim_buf_set_extmark(state.buffer_number, test_ns, test.Line, 0, {
+								virt_text = {{ "✅" }}
+							})
+						end
+					elseif test.Action == "fail" then
+						if test.Line then
+							vim.api.nvim_buf_set_extmark(state.buffer_number, test_ns, test.Line, 0, {
+								virt_text = {{ "🟥" }}
+							})
+						end
 					end
-					put(test)
-
-
-					-- if test_metadata.Action == "output" then
-					-- 	if not test_metadata.Test then
-					-- 		return
-					-- 	end
-
-					-- 	assert(state.tests, vim.inspect(state))
-					-- 	table.insert(state.tests[go_make_key(test_metadata)].output, vim.trim(test_metadata.Output))
-
-					-- elseif test_metadata.Action == "pass" or test_metadata.Action == "fail" then
-					-- 	-- Mark the test as passing.
-					-- 	state.tests[go_make_key(test_metadata)].success = test_metadata.Action == "pass"
-
-					-- 	local test = state.tests[go_make_key(test_metadata)]
-					-- 	if test.success then
-					-- 		local text = {"OK"}
-					-- 		put(state)
-					-- 		put(test_ns)
-					-- 		put(test)
-					-- 		vim.api.nvim_buf_set_extmark(state.buffer_number, test_ns, test.line, 0, {
-					-- 			virt_text = { text },
-					-- 		})
-					-- 	end
-					-- elseif test_metadata.Action == "run" or test_metadata.Action == "pause" or test_metadata.Action == "cont" then
-					-- 	-- Do nothing.
-					-- else
-					-- 	error("Failed to handle"..vim.inspect(data))
-					-- end
 				end
 			end
 		end,

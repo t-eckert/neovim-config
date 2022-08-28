@@ -81,22 +81,24 @@ nnoremap("<leader>h", ":split<CR>") -- Horizontal split
 nnoremap("<leader>e", ":NvimTreeToggle<CR>") -- Toggle filetree
 
 nnoremap("<leader>w", ":w<CR>") -- Save
-nnoremap("<leader>q", ":wq<CR>") -- Save and quit buffer
-nnoremap("<leader>Q", ":q<CR>") -- Quit buffer
+nnoremap("<leader>q", ":q<CR>") -- Quit buffer
+nnoremap("<leader>Q", ":wq<CR>") -- Save and quit buffer
 
 nmap("<leader>t", ":tab sb<CR>") -- Open current buffer in a new tab
 
 nnoremap("<leader>n", "o<esc>I- [ ] <esc>") -- Create task
 nnoremap("<leader>x", "^elrx<ESC>") -- Cross off a task
-nnoremap("<leader>-", "^elr-<ESC>") -- Partially complete a task
-nnoremap("<leader>>", "^elr><ESC>") -- Defer a task
 
 nnoremap("<leader>a", ":nohl<CR>") -- Clear search highlight
 
 nmap("<leader>b", ":Buffers<cr>") -- Search buffers
-nmap("<leader>p", ":Telescope find_files<cr>") -- Search files
-nmap("<leader>g", ":Telescope live_grep<cr>") -- Grep files
+nmap("<leader>p", ":Telescope find_files<CR>") -- Search files
+nmap("<leader>f", ":Telescope live_grep<CR>") -- Grep files
+nmap("<leader>b", ":Telescope git_branches<CR>") -- Change branches
 
 nnoremap("<leader>dn", vim.diagnostic.goto_next)
 nnoremap("<leader>dp", vim.diagnostic.goto_prev)
 nnoremap("<leader>r", vim.lsp.buf.rename)
+
+nnoremap("<leader>1", ":so %<CR>") -- Source the current file
+nnoremap("<leader>9", ":ToggleColumnColor<CR>") -- Toggle highlighting columns 80 and 120
