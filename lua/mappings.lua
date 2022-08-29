@@ -100,5 +100,8 @@ nnoremap("<leader>dn", vim.diagnostic.goto_next)
 nnoremap("<leader>dp", vim.diagnostic.goto_prev)
 nnoremap("<leader>r", vim.lsp.buf.rename)
 
-nnoremap("<leader>1", ":so %<CR>") -- Source the current file
-nnoremap("<leader>9", ":ToggleColumnColor<CR>") -- Toggle highlighting columns 80 and 120
+nnoremap("<leader>s", ":so %<CR>") -- Source the current file
+nnoremap("<leader>o", ":ToggleColumnColor<CR>") -- Toggle highlighting columns 80 and 120
+
+
+
