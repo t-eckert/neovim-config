@@ -8,35 +8,31 @@ local attach_testrunner = function(buffer_number, pattern, test_command, options
 		tests = {}
 	}
 
-	-- Create the autocommand
+	local run_tests = function()
+		vim.api.nvim_buf_clear_namespace(buffer_number, test_ns, 0, -1)
+
+		state = {
+			buffer_number = buffer_number,
+			tests = {}
+		}
+
+		vim.fn.jobstart(test_command, options(state))
+	end
+
+	-- Run the tests once to start off.
+	run_tests()
+
+	-- Create the autocommand.
 	vim.api.nvim_create_autocmd("BufWritePost", {
 		group = vim.api.nvim_create_augroup(string.format("testrunner-%s", buffer_number), { clear=true }),
 		pattern = pattern,
-		callback = function()
-			vim.api.nvim_buf_clear_namespace(buffer_number, test_ns, 0, -1)
-
-			state = {
-				buffer_number = buffer_number,
-				tests = {}
-			}
-
-			vim.fn.jobstart(test_command, options(state))
-		end,
+		callback = run_tests,
 	})
 end
 
 -----------------------------------------------------------------------------------------------------------------------
 -- Go -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
-
-local go_test_function_name = function(fullname)
-	local segments = {}
-	-- Break on "/" for matches.
-	for str in string.gmatch(fullname, "([^/]+)") do
-		table.insert(segments, str)
-	end
-	return segments[1]
-end
 
 -- Use treesitter to find the line in the buffer matching the given test name.
 local go_find_line = function(buffer_number, name)
@@ -127,5 +123,7 @@ local go_options = function(state)
 	}
 end
 
-attach_testrunner(go_buffer_number, go_pattern, go_test_command, go_options)
+vim.api.nvim_create_user_command("AttachTestrunner", function ()
+	attach_testrunner(go_buffer_number, go_pattern, go_test_command, go_options)
+end, {})
 
