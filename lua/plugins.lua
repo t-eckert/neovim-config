@@ -59,6 +59,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug("gregsexton/MatchTag", {["for"] = "html"}) -- match tags in html
 	Plug("othree/html5.vim", {["for"] = "html"}) -- html5 support
 	Plug 'mzlogin/vim-markdown-toc'
+	Plug "f-person/git-blame.nvim"
 
 plugEnd()
 
