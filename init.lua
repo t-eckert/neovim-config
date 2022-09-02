@@ -22,6 +22,7 @@ require("completion")
 require("gitsigns").setup()
 require("prettier")
 require("terminal")
+require("snippets")
 
 -- Scripts
 require("testrunner")
