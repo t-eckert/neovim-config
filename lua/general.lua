@@ -3,7 +3,7 @@ local cmd = vim.cmd
 
 opt.backup = false -- don't use backup files
 opt.writebackup = false -- don't backup the file while editing
-opt.swapfile = false -- don't create swap files foro new buffers
+opt.swapfile = false -- don't create swap files for new buffers
 opt.updatecount = 0 -- don't write swap files after some number of updates
 
 opt.backupdir = {

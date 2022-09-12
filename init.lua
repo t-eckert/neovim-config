@@ -8,7 +8,6 @@ require("globals")
 require("search")
 require("appearance")
 require("mappings")
-require("theme")
 
 -- Plugins
 require("plugins")
@@ -30,8 +29,8 @@ require("boundaries")
 
 local utils = require("utils")
 
--- create a completion_nvim table on _G which is visible via
--- v:lua from vimscript
+_GlobalCallbacks = _GlobalCallbacks or {}
+_G.globals = {_store = _GlobalCallbacks}
 _G.completion_nvim = {}
 
 function _G.completion_nvim.smart_pumvisible(vis_seq, not_vis_seq)
@@ -52,4 +51,14 @@ function _G.put(...)
 
   print(table.concat(objects, '\n'))
   return ...
+end
+
+
+function globals._create(f)
+  table.insert(globals._store, f)
+  return #globals._store
+end
+
+function globals._execute(id, args)
+  globals._store[id](args)
 end

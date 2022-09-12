@@ -103,5 +103,3 @@ nnoremap("<leader>r", vim.lsp.buf.rename)
 nnoremap("<leader>s", ":so %<CR>") -- Source the current file
 nnoremap("<leader>o", ":ToggleColumnColor<CR>") -- Toggle highlighting columns 80 and 120
 
-
-

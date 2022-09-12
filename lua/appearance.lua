@@ -1,27 +1,26 @@
+vim.opt.shell = vim.env.SHELL
+
 vim.opt.number = true -- show line numbers
 vim.opt.relativenumber = true -- use relative line numbers
 vim.opt.wrap = false -- don't use line wrapping
 vim.opt.autoindent = true -- automatically set the indent of new lines
 vim.opt.ttyfast = true -- faster redrawing
-vim.opt.splitright = true
+vim.opt.splitright = true -- new windows will split right
 
 vim.opt.laststatus = 3 -- show the global statusline all the time
 vim.opt.scrolloff = 7 -- set 7 lines to the cursors - when moving vertical
 vim.opt.wildmenu = true -- enhanced command line completion
+vim.opt.wildmode = {"list", "longest"} -- complete files like a shell
 vim.opt.hidden = true -- current buffer can be put into background
 vim.opt.showcmd = true -- show incomplete commands
-vim.opt.showmode = true -- don't show which mode disabled for PowerLine
-vim.opt.wildmode = {"list", "longest"} -- complete files like a shell
-vim.opt.shell = vim.env.SHELL
+vim.opt.showmode = false -- don't show mode
 vim.opt.title = true -- set terminal title
 vim.opt.showmatch = true -- show matching braces
 vim.opt.mat = 2 -- how many tenths of a second to blink
-vim.opt.updatetime = 300
-vim.opt.signcolumn = "yes"
-vim.opt.shortmess = "atToOFc" -- prompt message options
-vim.cmd "set noshowmode"
-vim.cmd "set completeopt=menu,menuone,noselect"
-vim.opt.conceallevel = 0 -- Show text that has been concealed
+vim.opt.updatetime = 300 -- timeout to write to swap file
+vim.opt.signcolumn = "yes" -- add a sign column to the left
+vim.opt.shortmess = "xW" -- prompt message options
+vim.opt.conceallevel = 0 -- show text that has been concealed
 
 -- Diff settings
 table.insert(vim.opt.diffopt, "vertical")
