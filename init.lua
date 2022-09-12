@@ -3,8 +3,8 @@
 
 -- Settings
 require("general")
-require("autoreplace")
 require("globals")
+require("autoreplace")
 require("search")
 require("appearance")
 require("mappings")
@@ -29,8 +29,7 @@ require("boundaries")
 
 local utils = require("utils")
 
-_GlobalCallbacks = _GlobalCallbacks or {}
-_G.globals = {_store = _GlobalCallbacks}
+
 _G.completion_nvim = {}
 
 function _G.completion_nvim.smart_pumvisible(vis_seq, not_vis_seq)
@@ -53,12 +52,3 @@ function _G.put(...)
   return ...
 end
 
-
-function globals._create(f)
-  table.insert(globals._store, f)
-  return #globals._store
-end
-
-function globals._execute(id, args)
-  globals._store[id](args)
-end
