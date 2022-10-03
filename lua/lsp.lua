@@ -42,3 +42,13 @@ require("lspconfig")["sumneko_lua"].setup {
 		}
 	}
 }
+
+vim.api.nvim_create_user_command("GoEnt", function()
+	require("lspconfig")["gopls"].setup{
+		settings = {
+			gopls = {
+				buildFlags = {"-tags=enterprise"}
+			}
+		}
+	}
+end, {})
