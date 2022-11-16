@@ -49,6 +49,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "editorconfig/editorconfig-vim" -- editorconfig file support
 
 	Plug "psf/black" -- Python formatter
+	Plug "rust-lang/rust.vim" -- Rust support
 	Plug "fatih/vim-go" -- Go support
 	Plug "ray-x/go.nvim" -- More Go support
 	Plug "JulesWang/css.vim" -- CSS support
@@ -70,3 +71,4 @@ require("nvim-treesitter.configs").setup({
 	auto_install = true,
 })
 
+vim.g.rustfmt_autosave = 1
