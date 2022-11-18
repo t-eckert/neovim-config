@@ -26,6 +26,12 @@ plugBegin("~/.config/nvim/plugged")
 	Plug "sheerun/vim-polyglot" -- Syntax support
 	Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
 
+	Plug "mfussenegger/nvim-dap" -- DAP
+	Plug "rcarriga/nvim-dap-ui" -- DAP UI
+	Plug "leoluz/nvim-dap-go" -- Go support
+	Plug "theHamsta/nvim-dap-virtual-text"
+	Plug "nvim-telescope/telescope-dap.nvim"
+
 	Plug "hrsh7th/nvim-cmp" -- Completion
 	Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP 
 	Plug "hrsh7th/cmp-buffer" -- Completion buffer
