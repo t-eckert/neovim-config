@@ -10,6 +10,7 @@ plugBegin("~/.config/nvim/plugged")
 	Plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"}) -- Treesitter
 	Plug "neovim/nvim-lspconfig" -- Language server
 	Plug "nvim-lualine/lualine.nvim" -- Status line
+	Plug "nanozuki/tabby.nvim" -- Tabline
 	Plug "kyazdani42/nvim-web-devicons" -- Icons
 	Plug "lewis6991/gitsigns.nvim" -- Git gutter
 	Plug "nvim-lua/plenary.nvim" -- Lua helpers that are used by other plugins

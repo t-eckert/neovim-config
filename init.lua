@@ -8,6 +8,7 @@ require("autoreplace")
 require("search")
 require("appearance")
 require("mappings")
+require("tabs")
 
 -- Plugins
 require("plugins")
