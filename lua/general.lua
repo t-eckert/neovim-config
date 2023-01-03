@@ -48,3 +48,32 @@ cmd [[highlight xmlAttrib cterm=italic term=italic gui=italic]]
 -- highlight Type cterm=italic term=italic gui=italic
 cmd [[highlight Normal ctermbg=none]]
 
+cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+
+-- see if the file exists
+function FileExists(file)
+  local f = io.open(file, "rb")
+  if f then f:close() end
+  return f ~= nil
+end
+
+-- Get the value of the module name from go.mod in PWD
+function GetGoModuleName()
+  if not FileExists("go.mod") then return nil end
+  for line in io.lines("go.mod") do
+    if vim.startswith(line, "module") then
+      local items = vim.split(line, " ")
+      local module_name = vim.trim(items[2])
+      return module_name
+    end
+  end
+  return nil
+end
+
+local goModule = GetGoModuleName()
+
+local servers = {
+  goals = {
+    ["local"] = goModule,
+  }
+}
