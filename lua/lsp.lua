@@ -1,13 +1,13 @@
 -- Setup lspconfig.
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local on_attach = function()
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
-	vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer=0})
-	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer=0})
-	vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, {buffer=0})
-	vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer=0})
-	vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer=0})
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
+	vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { buffer = 0 })
+	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
+	vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { buffer = 0 })
+	vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
+	vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = 0 })
 end
 
 
@@ -44,10 +44,10 @@ require("lspconfig")["sumneko_lua"].setup {
 }
 
 vim.api.nvim_create_user_command("GoEnt", function()
-	require("lspconfig")["gopls"].setup{
+	require("lspconfig")["gopls"].setup {
 		settings = {
 			gopls = {
-				buildFlags = {"-tags=enterprise"}
+				buildFlags = { "-tags=enterprise" }
 			}
 		}
 	}

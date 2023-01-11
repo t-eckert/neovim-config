@@ -13,7 +13,7 @@ local vnoremap = utils.vnoremap
 --------------------------------------------------------------------------------
 -- General Mappings ------------------------------------------------------------
 --------------------------------------------------------------------------------
--- Indent/unindent 
+-- Indent/unindent
 vmap("<", "<gv")
 vmap(">", ">gv")
 
@@ -31,6 +31,12 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-L>", "<C-W>l")
 nnoremap("<C-H>", "<C-W>h")
 
+-- Resize Panes with SHIFT+CTRL+direction
+nnoremap("<C-S-J>", ":")
+nnoremap("<C-S-K>", "")
+nnoremap("<C-S-L>", "")
+nnoremap("<C-S-H>", "")
+
 -- Change tabs with tab
 nnoremap("<TAB>", "gt")
 nnoremap("<S-TAB>", "gT")
@@ -40,10 +46,10 @@ nnoremap("<C-e>", "6<c-e>")
 nnoremap("<C-y>", "6<c-y>")
 
 -- Moving up and down work as you would expect
-nnoremap("j", 'v:count == 0 ? "gj" : "j"', {expr = true})
-nnoremap("k", 'v:count == 0 ? "gk" : "k"', {expr = true})
-nnoremap("^", 'v:count == 0 ? "g^" :  "^"', {expr = true})
-nnoremap("$", 'v:count == 0 ? "g$" : "$"', {expr = true})
+nnoremap("j", 'v:count == 0 ? "gj" : "j"', { expr = true })
+nnoremap("k", 'v:count == 0 ? "gk" : "k"', { expr = true })
+nnoremap("^", 'v:count == 0 ? "g^" :  "^"', { expr = true })
+nnoremap("$", 'v:count == 0 ? "g$" : "$"', { expr = true })
 
 -- Custom text objects
 xmap("il", ":<c-u>normal! g_v^<cr>") --inner-line
@@ -75,6 +81,9 @@ nnoremap("<F10>", ":lua require'dap'.step_over()<CR>")
 nnoremap("<F11>", ":lua require'dap'.step_into()<CR>")
 nnoremap("<F12>", ":lua require'dap'.step_out()<CR>")
 
+-- Accept Copilot suggestion
+inoremap("<S-CR>", 'copilot#Accept("<CR>")')
+
 --------------------------------------------------------------------------------
 -- Leader Mappings -------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -105,11 +114,10 @@ nnoremap("<leader>dn", vim.diagnostic.goto_next) -- Goto next diagnostic
 nnoremap("<leader>dp", vim.diagnostic.goto_prev) -- Goto previous diagnostic
 nnoremap("<leader>dr", ":lua require'dap'.repl.open()<CR>") -- Goto previous diagnostic
 
-nnoremap("<leader>b",":lua require'dap'.toggle_breakpoint()<CR>")
-nnoremap("<leader>B",":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition |> '))<CR>")
+nnoremap("<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+nnoremap("<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition |> '))<CR>")
 
 nnoremap("<leader>r", vim.lsp.buf.rename) -- Rename current token
 
 nnoremap("<leader>s", ":so %<CR>") -- Source the current file
 nnoremap("<leader>o", ":ToggleColumnColor<CR>") -- Toggle highlighting columns 80 and 120
-

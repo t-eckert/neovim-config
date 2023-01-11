@@ -8,9 +8,9 @@ vim.opt.ttyfast = true -- faster redrawing
 vim.opt.splitright = true -- new windows will split right
 
 vim.opt.laststatus = 3 -- show the global statusline all the time
-vim.opt.scrolloff = 7 -- set 7 lines to the cursors - when moving vertical
+vim.opt.scrolloff = 7 -- set 7 lines to the cursors - when moving vertically
 vim.opt.wildmenu = true -- enhanced command line completion
-vim.opt.wildmode = {"list", "longest"} -- complete files like a shell
+vim.opt.wildmode = { "list", "longest" } -- complete files like a shell
 vim.opt.hidden = true -- current buffer can be put into background
 vim.opt.showcmd = true -- show incomplete commands
 vim.opt.showmode = false -- don't show mode
