@@ -46,7 +46,7 @@ Plug "ray-x/guihua.lua" -- GUI management
 Plug("akinsho/toggleterm.nvim", { ["tag"] = "v2.*" })
 Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
 Plug "sheerun/vim-polyglot" -- Syntax support
-Plug "github/copilot.vim" -- Copilot
+Plug "zbirenbaum/copilot.lua" -- Copilot
 Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
 
 
@@ -55,6 +55,7 @@ Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP
 Plug "hrsh7th/cmp-buffer" -- Completion buffer
 Plug "hrsh7th/cmp-path" -- Path for CMP
 Plug "hrsh7th/cmp-cmdline" -- Command line for CMP
+Plug "zbirenbaum/copilot-cmp" -- Copilot completion
 Plug "L3MON4D3/LuaSnip" -- Snippet engine
 Plug "saadparwaiz1/cmp_luasnip" -- Engine plugin for CMP
 Plug "rafamadriz/friendly-snippets" -- Common, useful snippets
@@ -90,4 +91,9 @@ plugEnd()
 -- Initialize the one-liner setups
 require("nvim-autopairs").setup()
 require("mason").setup()
+require("copilot").setup({
+	suggestion = { enabled = false },
+	panel = { enabled = false },
+})
+require("copilot_cmp").setup()
 vim.g.rustfmt_autosave = 1

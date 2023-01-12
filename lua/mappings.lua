@@ -81,9 +81,6 @@ nnoremap("<F10>", ":lua require'dap'.step_over()<CR>")
 nnoremap("<F11>", ":lua require'dap'.step_into()<CR>")
 nnoremap("<F12>", ":lua require'dap'.step_out()<CR>")
 
--- Accept Copilot suggestion
-inoremap("<S-CR>", 'copilot#Accept("<CR>")')
-
 --------------------------------------------------------------------------------
 -- Leader Mappings -------------------------------------------------------------
 --------------------------------------------------------------------------------
