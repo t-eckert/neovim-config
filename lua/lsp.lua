@@ -1,5 +1,14 @@
 local navic = require("nvim-navic")
 
+require('mason-lspconfig').setup({
+	ensure_installed = {
+		"gopls",
+		"sumneko_lua",
+		"rust_analyzer",
+		"tsserver",
+	}
+})
+
 local on_attach = function(client, bufnr)
 	if client.server_capabilities.documentSymbolProvider then
 		navic.attach(client, bufnr)
@@ -15,27 +24,15 @@ local on_attach = function(client, bufnr)
 end
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local lsp = require("lsp-zero")
-
-lsp.set_preferences({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	suggest_lsp_servers = true,
-	setup_servers_on_start = true,
-	set_lsp_keymaps = true,
-	configure_diagnostics = true,
-	cmp_capabilities = true,
-	manage_nvim_cmp = true,
-	call_servers = "local",
-	sign_icons = {
-		error = "x",
-		warn = "!",
-		hint = ">",
-		info = "i"
-	}
+local lspconfig = require('lspconfig')
+require('mason-lspconfig').setup_handlers({
+	function(server_name)
+		lspconfig[server_name].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+	end,
 })
-
-lsp.setup()
 
 require("lspconfig")["sumneko_lua"].setup {
 	settings = {
