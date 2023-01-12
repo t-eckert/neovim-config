@@ -1,6 +1,10 @@
--- Setup lspconfig.
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local on_attach = function()
+local navic = require("nvim-navic")
+
+local on_attach = function(client, bufnr)
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, bufnr)
+	end
+
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
 	vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, { buffer = 0 })
@@ -9,7 +13,7 @@ local on_attach = function()
 	vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
 	vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = 0 })
 end
-
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local lsp = require("lsp-zero")
 

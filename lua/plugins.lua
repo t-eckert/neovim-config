@@ -40,26 +40,27 @@ Plug "norcalli/nvim-colorizer.lua" -- Show hex colors
 
 Plug "sharkdp/fd" -- Find alternative
 
+Plug "zbirenbaum/copilot.lua" -- Copilot
+
 Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.0" }) -- Modal search
 Plug "edluffy/hologram.nvim" -- Display images
 Plug "ray-x/guihua.lua" -- GUI management
 Plug("akinsho/toggleterm.nvim", { ["tag"] = "v2.*" })
 Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
 Plug "sheerun/vim-polyglot" -- Syntax support
-Plug "zbirenbaum/copilot.lua" -- Copilot
 Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
 
+Plug "SmiteshP/nvim-navic" -- Breadcrumbs
 
 Plug "hrsh7th/nvim-cmp" -- Completion
 Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP
 Plug "hrsh7th/cmp-buffer" -- Completion buffer
 Plug "hrsh7th/cmp-path" -- Path for CMP
 Plug "hrsh7th/cmp-cmdline" -- Command line for CMP
-Plug "zbirenbaum/copilot-cmp" -- Copilot completion
 Plug "L3MON4D3/LuaSnip" -- Snippet engine
 Plug "saadparwaiz1/cmp_luasnip" -- Engine plugin for CMP
 Plug "rafamadriz/friendly-snippets" -- Common, useful snippets
-
+Plug "mattn/emmet-vim" -- Emmet completion
 
 Plug "EdenEast/nightfox.nvim" -- Color scheme
 
@@ -80,7 +81,6 @@ Plug("prettier/vim-prettier",
 	{ ["do"] = "yarn install --frozen-lockfile --production",
 		["for"] = { "javascript", "typescript", "css", "less", "scss", "json", "graphql", "vue", "svelte", "html" } }) -- Prettier
 Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
-Plug "mattn/emmet-vim" -- Emmet completion
 Plug("gregsexton/MatchTag", { ["for"] = "html" }) -- match tags in html
 Plug("othree/html5.vim", { ["for"] = "html" }) -- html5 support
 Plug "mzlogin/vim-markdown-toc"
@@ -91,9 +91,7 @@ plugEnd()
 -- Initialize the one-liner setups
 require("nvim-autopairs").setup()
 require("mason").setup()
-require("copilot").setup({
-	suggestion = { enabled = false },
-	panel = { enabled = false },
-})
-require("copilot_cmp").setup()
+require("copilot").setup()
 vim.g.rustfmt_autosave = 1
+require("dap-go").setup()
+require("nvim-navic").setup()

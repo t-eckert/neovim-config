@@ -1,6 +1,4 @@
--- init.lua
 -- Neovim Configuration
-
 require("general")
 require("globals")
 require("autoreplace")
@@ -20,4 +18,5 @@ require("snippets")
 require("testrunner")
 require("boundaries")
 require("completion")
+require("winbar")
 require("tabline")
