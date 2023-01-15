@@ -2,7 +2,6 @@ local navic = require("nvim-navic")
 
 require('mason-lspconfig').setup({
 	ensure_installed = {
-		"gopls",
 		"sumneko_lua",
 		"rust_analyzer",
 		"tsserver",

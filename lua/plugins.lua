@@ -40,7 +40,7 @@ Plug "norcalli/nvim-colorizer.lua" -- Show hex colors
 
 Plug "sharkdp/fd" -- Find alternative
 
-Plug "zbirenbaum/copilot.lua" -- Copilot
+Plug "github/copilot.vim" -- Copilot
 
 Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.0" }) -- Modal search
 Plug "edluffy/hologram.nvim" -- Display images
@@ -91,7 +91,6 @@ plugEnd()
 -- Initialize the one-liner setups
 require("nvim-autopairs").setup()
 require("mason").setup()
-require("copilot").setup()
 vim.g.rustfmt_autosave = 1
 require("dap-go").setup()
 require("nvim-navic").setup()
