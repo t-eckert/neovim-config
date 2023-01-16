@@ -50,6 +50,8 @@ Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
 Plug "sheerun/vim-polyglot" -- Syntax support
 Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
 
+Plug "wakatime/vim-wakatime" -- Wakatime
+
 Plug "SmiteshP/nvim-navic" -- Breadcrumbs
 
 Plug "hrsh7th/nvim-cmp" -- Completion
