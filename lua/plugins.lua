@@ -96,3 +96,5 @@ require("mason").setup()
 vim.g.rustfmt_autosave = 1
 require("dap-go").setup()
 require("nvim-navic").setup()
+require("gitsigns").setup()
+require("colorizer").setup()

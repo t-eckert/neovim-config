@@ -26,8 +26,8 @@ opt.history = 1000 -- store the last 1000 commands entered
 
 opt.inccommand = "nosplit" -- show results of substitution without a split
 
-opt.backspace = {"indent", "eol,start"} -- make backspace behave like I want
-opt.clipboard = {"unnamed", "unnamedplus"} -- use the system clipboard
+opt.backspace = { "indent", "eol,start" } -- make backspace behave like I want
+opt.clipboard = { "unnamed", "unnamedplus" } -- use the system clipboard
 opt.mouse = "a" -- set mouse mode to all modes
 
 -- error bells
@@ -40,6 +40,8 @@ cmd [[filetype plugin indent on]]
 -- make the highlighting of tabs and other non-text less annoying
 cmd [[highlight SpecialKey ctermfg=19 guifg=#333333]]
 cmd [[highlight NonText ctermfg=19 guifg=#333333]]
+
+cmd [[set termguicolors]]
 
 -- make comments and HTML attributes italic
 cmd [[highlight Comment cterm=italic term=italic gui=italic]]
