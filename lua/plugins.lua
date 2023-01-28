@@ -22,6 +22,12 @@ Plug "kyazdani42/nvim-web-devicons" -- Icons
 Plug "kyazdani42/nvim-tree.lua" -- File tree
 Plug "nvim-lualine/lualine.nvim" -- Status line
 Plug "nanozuki/tabby.nvim" -- Tabline
+Plug "SmiteshP/nvim-navic" -- Breadcrumbs
+Plug "ray-x/guihua.lua" -- GUI management
+Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.0" }) -- Modal search
+Plug("akinsho/toggleterm.nvim", { ["tag"] = "v2.*" }) -- Toggleable terminal
+
+Plug "notjedi/nvim-rooter.lua" -- Change working directory to root on startup
 
 -- Debugging
 Plug "mfussenegger/nvim-dap" -- DAP
@@ -30,32 +36,8 @@ Plug "leoluz/nvim-dap-go" -- Go support
 Plug "theHamsta/nvim-dap-virtual-text"
 Plug "nvim-telescope/telescope-dap.nvim"
 
-Plug "lewis6991/gitsigns.nvim" -- Git gutter
-
-Plug "windwp/nvim-autopairs" -- Autoclose
-
-Plug "tpope/vim-abolish" -- Better replacement
-
-Plug "norcalli/nvim-colorizer.lua" -- Show hex colors
-
-Plug "sharkdp/fd" -- Find alternative
-
+-- Snippets
 Plug "github/copilot.vim" -- Copilot
-
-Plug "gpanders/editorconfig.nvim" -- Editorconfig
-
-Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.0" }) -- Modal search
-Plug "edluffy/hologram.nvim" -- Display images
-Plug "ray-x/guihua.lua" -- GUI management
-Plug("akinsho/toggleterm.nvim", { ["tag"] = "v2.*" })
-Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
-Plug "sheerun/vim-polyglot" -- Syntax support
-Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
-
-Plug "wakatime/vim-wakatime" -- Wakatime
-
-Plug "SmiteshP/nvim-navic" -- Breadcrumbs
-
 Plug "hrsh7th/nvim-cmp" -- Completion
 Plug "hrsh7th/cmp-nvim-lsp" -- Completion LSP
 Plug "hrsh7th/cmp-buffer" -- Completion buffer
@@ -66,29 +48,41 @@ Plug "saadparwaiz1/cmp_luasnip" -- Engine plugin for CMP
 Plug "rafamadriz/friendly-snippets" -- Common, useful snippets
 Plug "mattn/emmet-vim" -- Emmet completion
 
+-- Formatting and code visuals
 Plug "EdenEast/nightfox.nvim" -- Color scheme
-
-Plug "kburdett/vim-nuuid" -- Insert new UUID on <leader>u
-Plug "tpope/vim-fugitive" -- Git support
-Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
-Plug "notjedi/nvim-rooter.lua" -- Change working directory to root on startup
-Plug "godlygeek/tabular" -- Alignment
-Plug "editorconfig/editorconfig-vim" -- editorconfig file support
-
+Plug "gpanders/editorconfig.nvim" -- Editorconfig
+Plug "norcalli/nvim-colorizer.lua" -- Show hex colors
+Plug "lukas-reineke/indent-blankline.nvim" -- Show vertical indent lines
+Plug "lewis6991/gitsigns.nvim" -- Git gutter
+Plug "sheerun/vim-polyglot" -- Syntax support
+Plug "edluffy/hologram.nvim" -- Display images
 Plug "psf/black" -- Python formatter
 Plug "ray-x/go.nvim" -- More Go support
 Plug "JulesWang/css.vim" -- CSS support
 Plug "alexlafroscia/postcss-syntax.vim" -- PostCSS syntax highlighting
 Plug "stephenway/postcss.vim" -- PostCSS support
 Plug "evanleck/vim-svelte" -- Svelte
-Plug("prettier/vim-prettier",
-	{ ["do"] = "yarn install --frozen-lockfile --production",
-		["for"] = { "javascript", "typescript", "css", "less", "scss", "json", "graphql", "vue", "svelte", "html" } }) -- Prettier
+Plug "wuelnerdotexe/vim-astro" -- Astro support
 Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 Plug("gregsexton/MatchTag", { ["for"] = "html" }) -- match tags in html
 Plug("othree/html5.vim", { ["for"] = "html" }) -- html5 support
-Plug "mzlogin/vim-markdown-toc"
-Plug "wuelnerdotexe/vim-astro"
+Plug "mzlogin/vim-markdown-toc" -- Markdown table of contents
+Plug("prettier/vim-prettier",
+	{ ["do"] = "yarn install --frozen-lockfile --production",
+		["for"] = { "javascript", "typescript", "css", "less", "scss", "json", "graphql", "vue", "svelte", "html" } }) -- Prettier
+
+-- Editing
+Plug "tpope/vim-abolish" -- Better replacement
+Plug "sharkdp/fd" -- Find alternative
+Plug "windwp/nvim-autopairs" -- Autoclose
+Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
+Plug "kburdett/vim-nuuid" -- Insert new UUID on <leader>u
+Plug "tpope/vim-fugitive" -- Git support
+Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
+Plug "godlygeek/tabular" -- Alignment
+
+-- Misc
+Plug "wakatime/vim-wakatime" -- Wakatime
 
 plugEnd()
 
