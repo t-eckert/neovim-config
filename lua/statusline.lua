@@ -2,6 +2,7 @@ local theme = require("lualine.themes.duskfox")
 
 local black = "#000000"
 
+
 theme.normal.a.fg = "#569fba"
 theme.insert.a.fg = "#a3be8c"
 theme.visual.a.fg = "#c4a7e7"
@@ -15,11 +16,6 @@ theme.normal.b.bg = black
 theme.insert.b.bg = black
 theme.visual.b.bg = black
 theme.terminal.b.bg = black
-
-theme.normal.c.bg = black
-theme.insert.c.bg = black
-theme.visual.c.bg = black
-theme.terminal.c.bg = black
 
 require("lualine").setup(
 	{
