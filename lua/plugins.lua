@@ -42,6 +42,8 @@ Plug "sharkdp/fd" -- Find alternative
 
 Plug "github/copilot.vim" -- Copilot
 
+Plug "gpanders/editorconfig.nvim" -- Editorconfig
+
 Plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.0" }) -- Modal search
 Plug "edluffy/hologram.nvim" -- Display images
 Plug "ray-x/guihua.lua" -- GUI management
