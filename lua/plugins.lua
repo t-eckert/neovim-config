@@ -57,6 +57,7 @@ Plug "lewis6991/gitsigns.nvim" -- Git gutter
 Plug "sheerun/vim-polyglot" -- Syntax support
 Plug "edluffy/hologram.nvim" -- Display images
 Plug "psf/black" -- Python formatter
+Plug "fatih/vim-go" -- Go support
 Plug "ray-x/go.nvim" -- More Go support
 Plug "JulesWang/css.vim" -- CSS support
 Plug "alexlafroscia/postcss-syntax.vim" -- PostCSS syntax highlighting
@@ -66,7 +67,9 @@ Plug "wuelnerdotexe/vim-astro" -- Astro support
 Plug "JoosepAlviste/nvim-ts-context-commentstring" -- TS comment context
 Plug("gregsexton/MatchTag", { ["for"] = "html" }) -- match tags in html
 Plug("othree/html5.vim", { ["for"] = "html" }) -- html5 support
+Plug 'pangloss/vim-javascript' -- Javascript support
 Plug "mzlogin/vim-markdown-toc" -- Markdown table of contents
+Plug 'HerringtonDarkholme/yats.vim' -- Typescript support
 Plug("prettier/vim-prettier",
 	{ ["do"] = "yarn install --frozen-lockfile --production",
 		["for"] = { "javascript", "typescript", "css", "less", "scss", "json", "graphql", "vue", "svelte", "html" } }) -- Prettier

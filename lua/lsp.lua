@@ -2,7 +2,6 @@ local navic = require("nvim-navic")
 
 require('mason-lspconfig').setup({
 	ensure_installed = {
-		"sumneko_lua",
 		"rust_analyzer",
 		"tsserver",
 	}
@@ -33,7 +32,7 @@ require('mason-lspconfig').setup_handlers({
 	end,
 })
 
-require("lspconfig")["sumneko_lua"].setup {
+require("lspconfig")["lua_ls"].setup {
 	settings = {
 		Lua = {
 			diagnostics = {
