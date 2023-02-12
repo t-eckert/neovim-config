@@ -1,8 +1,8 @@
 require("dapui").setup() -- User interface for debugging
 require("nvim-dap-virtual-text").setup() -- Show types and values while debugging
 
-vim.fn.sign_define('DapBreakpoint', {text='🛑'})
-vim.fn.sign_define('DapBreakpointCondition', {text='🛑'})
+vim.fn.sign_define('DapBreakpoint', { text = '🛑' })
+vim.fn.sign_define('DapBreakpointCondition', { text = '🛑' })
 
 -- Automatically start the UI when debugging
 local dap, ui = require("dap"), require("dapui")
@@ -15,8 +15,3 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
 	ui.close()
 end
-
--- Go
--- Requires the delve debugger to be available on $PATH
--- https://github.com/go-delve/delve
-require("dap-go").setup()
