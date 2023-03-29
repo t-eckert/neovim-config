@@ -58,6 +58,7 @@ Plug "sheerun/vim-polyglot" -- Syntax support
 Plug "edluffy/hologram.nvim" -- Display images
 Plug "psf/black" -- Python formatter
 Plug "fatih/vim-go" -- Go support
+Plug "imsnif/kdl.vim" -- KDL support
 Plug "ray-x/go.nvim" -- More Go support
 Plug "JulesWang/css.vim" -- CSS support
 Plug "alexlafroscia/postcss-syntax.vim" -- PostCSS syntax highlighting
@@ -92,6 +93,7 @@ plugEnd()
 -- Initialize the one-liner setups
 require("nvim-autopairs").setup()
 require("mason").setup()
+require("go").setup()
 vim.g.rustfmt_autosave = 1
 require("dap-go").setup()
 require("nvim-navic").setup()
