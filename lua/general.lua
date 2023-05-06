@@ -1,10 +1,10 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
-opt.backup = false -- don't use backup files
+opt.backup = false      -- don't use backup files
 opt.writebackup = false -- don't backup the file while editing
-opt.swapfile = false -- don't create swap files for new buffers
-opt.updatecount = 0 -- don't write swap files after some number of updates
+opt.swapfile = false    -- don't create swap files for new buffers
+opt.updatecount = 0     -- don't write swap files after some number of updates
 
 opt.backupdir = {
   "~/.vim-tmp",
@@ -22,13 +22,13 @@ opt.directory = {
   "/tmp"
 }
 
-opt.history = 1000 -- store the last 1000 commands entered
+opt.history = 1000                           -- store the last 1000 commands entered
 
-opt.inccommand = "nosplit" -- show results of substitution without a split
+opt.inccommand = "nosplit"                   -- show results of substitution without a split
 
-opt.backspace = { "indent", "eol,start" } -- make backspace behave like I want
+opt.backspace = { "indent", "eol,start" }    -- make backspace behave like I want
 opt.clipboard = { "unnamed", "unnamedplus" } -- use the system clipboard
-opt.mouse = "a" -- set mouse mode to all modes
+opt.mouse = "a"                              -- set mouse mode to all modes
 
 -- error bells
 opt.errorbells = false
@@ -50,7 +50,7 @@ cmd [[highlight xmlAttrib cterm=italic term=italic gui=italic]]
 -- highlight Type cterm=italic term=italic gui=italic
 cmd [[highlight Normal ctermbg=none]]
 
-cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- see if the file exists
 function FileExists(file)
