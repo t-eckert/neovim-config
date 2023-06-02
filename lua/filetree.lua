@@ -98,6 +98,9 @@ end
 
 require("nvim-tree").setup {
   on_attach = on_attach,
+  filters = {
+    exclude = { ".env*" }
+  },
   update_focused_file = {
     enable = true,
     update_cwd = true,
