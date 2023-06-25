@@ -46,7 +46,8 @@ Plug "hrsh7th/cmp-cmdline"          -- Command line for CMP
 Plug "L3MON4D3/LuaSnip"             -- Snippet engine
 Plug "saadparwaiz1/cmp_luasnip"     -- Engine plugin for CMP
 Plug "rafamadriz/friendly-snippets" -- Common, useful snippets
-Plug "mattn/emmet-vim"              -- Emmet completion
+Plug "aca/emmet-ls"                 -- Emmet completion
+
 
 -- Formatting and code visuals
 Plug "EdenEast/nightfox.nvim"                      -- Color scheme
@@ -76,7 +77,7 @@ Plug("prettier/vim-prettier",
 	{
 		["do"] = "yarn install --frozen-lockfile --production",
 		["for"] = { "javascript", "typescript", "css", "less", "scss", "json", "graphql", "vue", "svelte", "html" }
-	})                                                                                                           -- Prettier
+	}) -- Prettier
 
 -- Editing
 Plug "tpope/vim-abolish"          -- Better replacement
