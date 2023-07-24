@@ -90,7 +90,6 @@ Plug "tpope/vim-commentary"       -- Comment out multiple lines with gcc
 Plug "godlygeek/tabular"          -- Alignment
 
 -- Misc
-Plug "wakatime/vim-wakatime" -- Wakatime
 
 plugEnd()
 

@@ -1,10 +1,10 @@
-require("nightfox").setup({
-	options = {
-		transparent = true
-	}
-})
+-- require("nightfox").setup({
+-- 	options = {
+-- 		transparent = true
+-- 	}
+-- })
 
-vim.cmd("colorscheme duskfox")
+-- vim.cmd("colorscheme duskfox")
 
 require("50PH1A").setup()
 
