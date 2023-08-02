@@ -41,7 +41,7 @@ cmd [[filetype plugin indent on]]
 cmd [[highlight SpecialKey ctermfg=19 guifg=#333333]]
 cmd [[highlight NonText ctermfg=19 guifg=#333333]]
 
-cmd [[set termguicolors]]
+opt.termguicolors = true
 
 -- make comments and HTML attributes italic
 cmd [[highlight Comment cterm=italic term=italic gui=italic]]
