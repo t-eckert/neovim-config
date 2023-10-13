@@ -89,6 +89,7 @@ Plug "tpope/vim-fugitive" -- Git support
 Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
 Plug "godlygeek/tabular" -- Alignment
 Plug "akinsho/git-conflict.nvim" -- Git conflict markers
+Plug "weilbith/nvim-code-action-menu" -- Code action menu
 
 -- Misc
 
