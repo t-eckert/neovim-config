@@ -1,4 +1,4 @@
-require("dapui").setup() -- User interface for debugging
+require("dapui").setup()                 -- User interface for debugging
 require("nvim-dap-virtual-text").setup() -- Show types and values while debugging
 
 vim.fn.sign_define('DapBreakpoint', { text = '🛑' })
