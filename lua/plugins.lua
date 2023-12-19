@@ -49,17 +49,16 @@ Plug "aca/emmet-ls"                 -- Emmet completion
 
 
 -- Formatting and code visuals
-Plug "EdenEast/nightfox.nvim"                      -- Color scheme
 Plug "gpanders/editorconfig.nvim"                  -- Editorconfig
 Plug "norcalli/nvim-colorizer.lua"                 -- Show hex colors
 Plug "lukas-reineke/indent-blankline.nvim"         -- Show vertical indent lines
 Plug "lewis6991/gitsigns.nvim"                     -- Git gutter
 Plug "sheerun/vim-polyglot"                        -- Syntax support
-Plug "edluffy/hologram.nvim"                       -- Display images
 Plug "psf/black"                                   -- Python formatter
 Plug "fatih/vim-go"                                -- Go support
-Plug "imsnif/kdl.vim"                              -- KDL support
 Plug "ray-x/go.nvim"                               -- More Go support
+Plug "simrat39/rust-tools.nvim"                    -- Rust support
+Plug "imsnif/kdl.vim"                              -- KDL support
 Plug "JulesWang/css.vim"                           -- CSS support
 Plug "alexlafroscia/postcss-syntax.vim"            -- PostCSS syntax highlighting
 Plug "stephenway/postcss.vim"                      -- PostCSS support
@@ -90,8 +89,6 @@ Plug "godlygeek/tabular" -- Alignment
 Plug "akinsho/git-conflict.nvim" -- Git conflict markers
 Plug "weilbith/nvim-code-action-menu" -- Code action menu
 
--- Misc
-
 plugEnd()
 
 -- Initialize the one-liner setups
@@ -105,3 +102,17 @@ require("dap-go").setup({
 require("nvim-navic").setup()
 require("gitsigns").setup()
 require("colorizer").setup()
+
+-- Rust tools
+local rt = require("rust-tools")
+
+rt.setup({
+	server = {
+		on_attach = function(_, bufnr)
+			-- Hover actions
+			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+			-- Code action groups
+			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+		end,
+	},
+})
