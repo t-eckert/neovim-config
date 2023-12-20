@@ -126,26 +126,26 @@ local theme = {
 
 	Identifier                 = { fg = sc.fg },                    -- (preferred) any variable name
 	Statement                  = { fg = c.purple_light },           -- (preferred) any statement
-	Conditional                = {},                                --  if, then, else, endif, switch, etc.
-	Repeat                     = {},                                --   for, do, while, etc.
-	Label                      = {},                                --    case, default, etc.
+	Conditional                = { fg = c.purple_light },           -- if, then, else, endif, switch, etc.
+	Repeat                     = { fg = c.purple_light },           -- for, do, while, etc.
+	Label                      = { fg = c.purple_light },           -- case, default, etc.
 	Operator                   = { fg = c.blue_medium },            -- "sizeof", "+", "*", etc.
-	Keyword                    = { fg = c.purple_medium },          --  any other keyword
-	Exception                  = {},                                --  try, catch, throw
+	Keyword                    = { fg = c.purple_light },           -- any other keyword
+	Exception                  = { fg = c.red_medium },             -- try, catch, throw
 
 	PreProc                    = { fg = sc.mg },                    -- (preferred) generic Preprocessor
 
 	Type                       = { fg = c.purple_light },           -- (preferred) int, long, char, etc.
 	StorageClass               = {},                                -- static, register, volatile, etc.
-	Structure                  = {},                                -- struct, union, enum, etc.
-	Typedef                    = {},                                -- A typedef
+	Structure                  = { fg = c.purple_light },           -- struct, union, enum, etc.
+	Typedef                    = { fg = c.purple_light },           -- A typedef
 
 	Special                    = { fg = c.purple_medium },          -- (preferred) any special symbol
-	SpecialChar                = {},                                --  special character in a constant
-	Tag                        = {},                                --    you can use CTRL-] on this
-	Delimiter                  = {},                                --  character that needs attention
+	SpecialChar                = {},                                -- special character in a constant
+	Tag                        = {},                                -- you can use CTRL-] on this
+	Delimiter                  = {},                                -- character that needs attention
 	SpecialComment             = {},                                -- special things inside a comment
-	Debug                      = {},                                --    debugging statements
+	Debug                      = {},                                -- debugging statements
 
 	Underlined                 = { underline = true },              -- (preferred) text that stands out, HTML links
 	Bold                       = { bold = true },
