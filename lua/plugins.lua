@@ -49,6 +49,7 @@ Plug "aca/emmet-ls"                 -- Emmet completion
 
 
 -- Formatting and code visuals
+Plug 'catppuccin/nvim'                             -- Colorscheme
 Plug "gpanders/editorconfig.nvim"                  -- Editorconfig
 Plug "norcalli/nvim-colorizer.lua"                 -- Show hex colors
 Plug "lukas-reineke/indent-blankline.nvim"         -- Show vertical indent lines
@@ -78,15 +79,15 @@ Plug("prettier/vim-prettier",
 	}) -- Prettier
 
 -- Editing
-Plug "tpope/vim-abolish"          -- Better replacement
-Plug "sharkdp/fd"                 -- Find alternative
-Plug "windwp/nvim-autopairs"      -- Autoclose
-Plug "dhruvasagar/vim-table-mode" -- For creating great tables in md
-Plug "kburdett/vim-nuuid" -- Insert new UUID on <leader>u
-Plug "tpope/vim-fugitive" -- Git support
-Plug "tpope/vim-commentary" -- Comment out multiple lines with gcc
-Plug "godlygeek/tabular" -- Alignment
-Plug "akinsho/git-conflict.nvim" -- Git conflict markers
+Plug "tpope/vim-abolish"              -- Better replacement
+Plug "sharkdp/fd"                     -- Find alternative
+Plug "windwp/nvim-autopairs"          -- Autoclose
+Plug "dhruvasagar/vim-table-mode"     -- For creating great tables in md
+Plug "kburdett/vim-nuuid"             -- Insert new UUID on <leader>u
+Plug "tpope/vim-fugitive"             -- Git support
+Plug "tpope/vim-commentary"           -- Comment out multiple lines with gcc
+Plug "godlygeek/tabular"              -- Alignment
+Plug "akinsho/git-conflict.nvim"      -- Git conflict markers
 Plug "weilbith/nvim-code-action-menu" -- Code action menu
 
 plugEnd()

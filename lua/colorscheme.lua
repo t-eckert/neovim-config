@@ -1,6 +1,7 @@
-require("50PH1A").setup()
+require("catppuccin").setup({
+	flavour = "mocha",
+	transparent_background = true
+})
 
-vim.cmd("hi DiagnosticVirtualTextError guibg=#000000")
-vim.cmd("hi DiagnosticVirtualTextWarn guibg=#000000")
-vim.cmd("hi DiagnosticVirtualTextInfo guibg=#000000")
-vim.cmd("hi DiagnosticVirtualTextHint guibg=#000000")
+vim.cmd("colorscheme catppuccin")
+
